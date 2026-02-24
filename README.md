@@ -1,4 +1,4 @@
-体验链接：https://zl.hhz114514.qzz.io或https://bilihhz.github.io/web-instruction/  
+体验链接：https://zl.hhz114514.qzz.io 或 https://bilihhz.github.io/web-instruction/  
 就是用ai写的大框架然后自己改  
 可以自己fork然后部署到github pages或cloudflare pages  
 中文字体为[LXGW WenKai/霞鹜文楷](https://github.com/lxgw/LxgwWenKai)  

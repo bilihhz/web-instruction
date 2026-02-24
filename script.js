@@ -80,7 +80,7 @@ let isRunning = false;
 function startScrambleAnimation(targetText) {
     let iteration = 0;
     let frame = 0;
-    const stepSpeed = 6; // 稍微加快速度
+    const stepSpeed = 5; // 稍微加快速度
 
     function update() {
         let output = "";

@@ -17,7 +17,7 @@ const actionSentence = [
     "对着镜子说八百遍我是正常人", "喝下一升的热牛奶",
     "开始三十分钟的剧烈运动", "只用右手写字吃饭和做所有事",
     "去往图书馆拿出一本任意的书", "戴上黑色面具找到一个陌生人",
-    "对他说痛苦啊你就是我的唯一", "睡十分钟醒十分钟重复二十四小时", 
+    "对朋友说痛苦啊你就是我的唯一", "睡十分钟醒十分钟重复二十四小时", 
     "举起一把刀对着墙面划下痕迹", "眨三次眼并用力点一次头", 
     "找到任意白色液体并喝掉", "给见到的第一个熟人一拳",
     "工作十二小时后立刻下班休息", "在最痛苦的时候开怀大笑",
@@ -44,7 +44,7 @@ const actionSentence = [
     "找到一只山羊并骑在上面两小时", "把自己的内脏挂在家中的墙上，骨头部分可以不用处理。",
     "打开你最喜欢的游戏并给今天第一个登录的游戏充值任意金额。", "点一份外卖若超时就并且只给外卖员一块钱配送费。",
     "请前往附近的医院并跟医生坚持说自己有病并说出症状。",  "在装满热牛奶的泳池中跳一支舞并把泳池里的牛奶喝完。",
-    "打开边狱巴士并只用一次通关15牢。"
+    "打开边狱巴士并只用一次通关15牢。", "无视朋友发的所有信息"
 ];
 
 // 3. 补充要求句 (后缀，增加难度或仪式感)
@@ -65,7 +65,7 @@ const easterEggs = [
     "向你最喜欢的女生表白，直到她明确同意或者拒绝为止。",
     "现在去喝一口水",
     "关闭屏幕",
-    "在一周内染上黑发，改名，并找到一位伴侣，白色头发最佳。"
+    "染上黑发并改名，然后找到一位伴侣，白色头发为优。"
 ];
 
 // 乱码库：使用全角/宽字符减少抖动感
@@ -124,13 +124,13 @@ btn.addEventListener('click', () => {
 
     // 10% 概率触发彩蛋库中的完整逻辑句
     if (Math.random() < 0.2) {
-        finalSentence = easterEggs[Math.floor(Math.random() * easterEggs.length)];
+        finalSentence = `致......${easterEggs[Math.floor(Math.random() * easterEggs.length)]}`;
     } else {
         // 90% 概率三段式拼装
         const scene = sceneSentence[Math.floor(Math.random() * sceneSentence.length)];
         const action = actionSentence[Math.floor(Math.random() * actionSentence.length)];
         const supplement = supplementSentence[Math.floor(Math.random() * supplementSentence.length)];
-        finalSentence = `${scene}${action}${supplement}`;
+        finalSentence = `致......${scene}${action}${supplement}`;
     }
 
     startScrambleAnimation(finalSentence);

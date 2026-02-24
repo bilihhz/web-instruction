@@ -123,7 +123,7 @@ btn.addEventListener('click', () => {
     let finalSentence = "";
 
     // 10% 概率触发彩蛋库中的完整逻辑句
-    if (Math.random() < 0.1) {
+    if (Math.random() < 0.2) {
         finalSentence = easterEggs[Math.floor(Math.random() * easterEggs.length)];
     } else {
         // 90% 概率三段式拼装

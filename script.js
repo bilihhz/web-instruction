@@ -9,7 +9,7 @@ const sceneSentence = [
     "请在四小时内", "用你最顺手的方式", "在大街上当众", "请在空调房里",
     "请将手边的物品", "请在三小时内", "若你感觉被约束请", "请在晚上九点整",
     "在二十四小时内务必", "请在一分钟之内", "在冬天的户外", "在夏天的烈日下", 
-    "请在深夜里", "写作业的过程中", "请在两小时内", "请在今天结束前"
+    "请在深夜里", "写作业的过程中", "请在两小时内", "请在今天结束前","在十二小时三十七分钟二十四秒后"
 ];
 
 // 2. 核心行为句 (动宾结构，通用性强)
@@ -65,7 +65,24 @@ const easterEggs = [
     "向你最喜欢的女生表白，直到她明确同意或者拒绝为止。",
     "现在去喝一口水",
     "关闭屏幕",
-    "染上黑发并改名，然后找到一位伴侣，白色头发为优。"
+    "染上黑发并改名，然后找到一位伴侣，白色头发为优。",
+    "告诉您所遇到的第34个人，自然常数其实是个整数。",
+    "煽动31只蝴蝶的翅膀。",
+    "用摄影机记录14区后巷居民的日常生活。",
+    "在任意工坊购买一把长度大于12英寸的短剑。",
+    "不要去执行任何所谓的指令。",
+    "在路口转14个弯，并直走12m",
+    "将有生命的画杀死",
+    "在屋顶撑伞，并将伞扔到下面人头上",
+    "将你路上遇到的第三片树叶放在头上3秒",
+    "俯瞰天空13秒",
+    "走到最近的十字路口，向对面方向遇见的第三个人挥手。",
+    "在向母亲说过晚安以后，数完圆周率然后在十分钟内睡着。",
+    "同时向前后分别移动十米",
+    "屏住呼吸30!秒",
+    "背诵圆周率倒数第六到第七百一十二位，结束之前不准饮水",
+    "两分钟内按照完全向北的直线移动一千米",
+    "在十二小时三十七分钟二十四秒后，完成一本针织的书",
 ];
 
 // 乱码库：使用全角/宽字符减少抖动感
@@ -124,13 +141,13 @@ btn.addEventListener('click', () => {
 
     // 10% 概率触发彩蛋库中的完整逻辑句
     if (Math.random() < 0.15) {
-        finalSentence = `致......${easterEggs[Math.floor(Math.random() * easterEggs.length)]}`;
+        finalSentence = `致：${easterEggs[Math.floor(Math.random() * easterEggs.length)]}`;
     } else {
         // 90% 概率三段式拼装
         const scene = sceneSentence[Math.floor(Math.random() * sceneSentence.length)];
         const action = actionSentence[Math.floor(Math.random() * actionSentence.length)];
         const supplement = supplementSentence[Math.floor(Math.random() * supplementSentence.length)];
-        finalSentence = `致......${scene}${action}${supplement}`;
+        finalSentence = `致：${scene}${action}${supplement}`;
     }
 
     startScrambleAnimation(finalSentence);
